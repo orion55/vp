@@ -70,6 +70,70 @@ a:hover {
 	src: url('../fonts/SegoeUISemiBold/SegoeUISemiBold.eot?#iefix') format('embedded-opentype'), url('../fonts/SegoeUISemiBold/SegoeUISemiBold.woff') format('woff'), url('../fonts/SegoeUISemiBold/SegoeUISemiBold.ttf') format('truetype');
 }
 
+/* Bounce To Top */
+
+.hvr-bounce-to-top {
+	position: relative;
+	display: inline-block;
+	transition-duration: .5s;
+	transition-property: color;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	vertical-align: middle;
+	box-shadow: 0 0 1px transparent;
+}
+
+.hvr-bounce-to-top:before {
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	content: '';
+	transition-timing-function: ease-out;
+	transition-duration: .5s;
+	transition-property: -webkit-transform;
+	transition-property: transform;
+	transition-property: transform, -webkit-transform;
+	-webkit-transform: scaleY(0);
+	transform: scaleY(0);
+	-webkit-transform-origin: 50% 100%;
+	transform-origin: 50% 100%;
+	background: linear-gradient(180deg, #6b64ac 0%, #9087c2 100%);
+}
+
+.hvr-bounce-to-top:hover,
+.hvr-bounce-to-top:focus,
+.hvr-bounce-to-top:active {
+	color: white;
+}
+
+.hvr-bounce-to-top:hover:before,
+.hvr-bounce-to-top:focus:before,
+.hvr-bounce-to-top:active:before {
+	transition-timing-function: cubic-bezier(.52, 1.64, .37, .66);
+	-webkit-transform: scaleY(1);
+	transform: scaleY(1);
+}
+
+.hvr-fade {
+	display: inline-block;
+	transition-duration: .3s;
+	transition-property: color, background-color;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	vertical-align: middle;
+	box-shadow: 0 0 1px transparent;
+}
+
+.hvr-fade:hover,
+.hvr-fade:focus,
+.hvr-fade:active {
+	color: white;
+	background-color: #7460a3;
+}
+
 /*!
  * Bootstrap Grid v4.0.0 (https://getbootstrap.com)
  * Copyright 2011-2018 The Bootstrap Authors
@@ -892,6 +956,56 @@ html {
 
 .invisible {
 	visibility: hidden !important;
+}
+
+.header {
+	background: linear-gradient(180deg, #bf67cb 0%, #d893e0 100%);
+}
+
+.header__wrap {
+	width: 1280px;
+	margin: 0 auto;
+}
+
+.menu {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.menu-item {
+	position: relative;
+	padding-top: 17px;
+	padding-bottom: 17px;
+	cursor: pointer;
+	text-align: center;
+	border-right: solid #dda9e4 1px;
+	flex-basis: 100%;
+}
+
+.menu-item a {
+	font-size: 22px;
+	font-weight: 400;
+	line-height: 20px;
+	text-transform: uppercase;
+	color: white;
+}
+
+.menu-item:last-child {
+	border-right: none;
+}
+
+.sub-menu {
+	position: absolute;
+	top: 59px;
+	left: -24px;
+	width: 100%;
+	background-color: #bf67cb;
+}
+
+.sub-menu .menu-item {
+	width: 100%;
+	border-right: none;
 }
 
 @media (min-width: 576px) {

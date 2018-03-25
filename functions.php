@@ -127,6 +127,9 @@ add_action('widgets_init', 'vp_widgets_init');
 function vp_scripts()
 {
     wp_enqueue_style('vp-style', get_stylesheet_uri());
+    wp_enqueue_style('vp-style-main', get_template_directory_uri() . '/assets/css/main.min.css', array(), time(), 'all');
+    wp_enqueue_style('vp-style-vendor', get_template_directory_uri() . '/assets/css/vendor.min.css');
+    wp_enqueue_style('vp-fa', get_template_directory_uri() . '/fa-svg-with-js.css');
 
     wp_enqueue_script('vp-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true);
 
@@ -135,6 +138,10 @@ function vp_scripts()
     if (is_singular() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
     }
+    wp_enqueue_script('vp-fontawesome', get_template_directory_uri() . '/js/fontawesome-all.min.js', [], '', true);
+    wp_enqueue_script('jquery');
+    wp_enqueue_script('vp-vendor', get_template_directory_uri() . '/assets/js/vendor.min.js', array('jquery'), '', true);
+    wp_enqueue_script('vp-main', get_template_directory_uri() . '/assets/js/main.min.js', array('jquery'), time(), true);
 }
 
 add_action('wp_enqueue_scripts', 'vp_scripts');
@@ -166,19 +173,14 @@ if (defined('JETPACK__VERSION')) {
     require get_template_directory() . '/inc/jetpack.php';
 }
 
-use Carbon_Fields\Container;
-use Carbon_Fields\Field;
+require get_template_directory() . '/inc/admin-panel.php';
 
-add_action('carbon_fields_register_fields', 'crb_attach_theme_options');
-function crb_attach_theme_options()
+function add_menu_classes($classes, $item, $args)
 {
-    Container::make('theme_options', __('Опции темы', 'crb'))
-        ->set_icon('dashicons-admin-comments')
-        ->set_page_menu_title('VictoriaPikalova')
-        ->add_fields(array(
-            Field::make('text', 'crb_phone1', 'Телефон1')
-                ->set_attribute('placeholder', '+7 (***) ***-**-**'),
-            Field::make('text', 'crb_phone2', 'Телефон2')
-                ->set_attribute('placeholder', '+7 (***) ***-**-**')
-        ));
+    if ($args->theme_location == 'menu-1') {
+        $classes[] = 'hvr-fade';
+    }
+    return $classes;
 }
+
+add_filter('nav_menu_css_class', 'add_menu_classes', 1, 3);
