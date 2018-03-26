@@ -1,10 +1,11 @@
 jQuery(document).ready(function ($) {
     var menu = $('#menu-topmenu');
     var hasChildren = menu.find(".menu-item-has-children");
+
     hasChildren.each(function () {
         $(this).find('.sub-menu').hide();
         var aHref = $(this).children('a');
-        aHref.html(aHref.html()+ ' <i class="fas fa-caret-down"></i>');
+        aHref.html(aHref.html() + ' <i class="fas fa-caret-down"></i>');
     });
 
     hasChildren.hover(
@@ -15,6 +16,11 @@ jQuery(document).ready(function ($) {
             $(this).find('.sub-menu').hide();
         }
     );
+
+    $('.menu-item-has-children > a').on('click', function (e) {
+        e.preventDefault();
+    });
+
 });
 jQuery(document).ready(function ($) {
 

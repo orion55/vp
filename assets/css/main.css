@@ -1002,7 +1002,7 @@ html {
 }
 
 .menu-item a {
-	font-size: 22px;
+	font-size: 21px;
 	font-weight: 400;
 	line-height: 20px;
 	text-transform: uppercase;
@@ -1013,8 +1013,9 @@ html {
 	border-right: none;
 }
 
-.sub-menu {
+ul.sub-menu {
 	position: absolute;
+	z-index: 1000;
 	top: 59px;
 	left: -24px;
 	display: none;
@@ -1022,7 +1023,8 @@ html {
 	background-color: #bf67cb;
 }
 
-.sub-menu .menu-item {
+ul.sub-menu .menu-item {
+	z-index: 100;
 	width: 100%;
 	border-right: none;
 }
@@ -3711,6 +3713,22 @@ html {
 	width: 100%;
 }
 
+.menu-item a {
+	font-size: 17px;
+}
+
+.info__block--two {
+	font-size: 16px;
+}
+
+.info__wrap {
+	width: 100%;
+}
+
+.info__pict {
+	width: 100%;
+}
+
 }
 
 @media only screen and (max-width: 767px) {
@@ -3739,7 +3757,7 @@ html {
 }
 
 .info__block--three {
-	flex-direction: row;
+	flex-direction: column;
 	order: 0;
 }
 
@@ -3748,11 +3766,11 @@ html {
 }
 
 .info__phone-number {
-	font-size: 16px;
+	font-size: 20px;
 }
 
 .info__phone--one {
-	padding-right: 10px;
+	padding-bottom: 20px;
 }
 
 }

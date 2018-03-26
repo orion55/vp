@@ -22,7 +22,7 @@
   position: relative;
   cursor: pointer;
   a {
-    font-size: 22px;
+    font-size: 21px;
     font-weight: 400;
     line-height: 20px;
     color: white;
@@ -33,22 +33,30 @@
   }
 }
 
-.sub-menu {
+ul.sub-menu {
   position: absolute;
   top: 59px;
   left: -24px;
   background-color: #bf67cb;
   width: 100%;
   display: none;
+  z-index: 1000;
   & .menu-item {
     width: 100%;
     border-right: none;
+    z-index: 100;
   }
 }
 
 @media only screen and (min-device-width: 768px) and (max-width: 1199px) {
   .header__wrap {
     width: 100%;
+  }
+  .menu-item a {
+    font-size: 17px;
+  }
+  .info__block--two {
+    font-size: 16px;
   }
 }
 

@@ -60,5 +60,10 @@
         </div>
     </div>
 </div>
+
+<div class="slider">
+    <?php echo do_shortcode('[smartslider3 slider=3]'); ?>
+</div>
+
 <div id="page" class="site">
     <div id="content" class="site-content">

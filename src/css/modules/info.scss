@@ -56,7 +56,12 @@
 }
 
 @media only screen and (min-device-width: 768px) and (max-width: 1199px) {
-
+  .info__wrap {
+    width: 100%;
+  }
+  .info__pict {
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -77,15 +82,15 @@
   }
   .info__block--three {
     order: 0;
-    flex-direction: row;
+    flex-direction: column;
   }
   .info__icon {
     padding-right: 5px;
   }
   .info__phone-number {
-    font-size: 16px;
+    font-size: 20px;
   }
   .info__phone--one {
-    padding-right: 10px;
+    padding-bottom: 20px;
   }
 }
