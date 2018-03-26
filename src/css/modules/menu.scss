@@ -39,8 +39,21 @@
   left: -24px;
   background-color: #bf67cb;
   width: 100%;
+  display: none;
   & .menu-item {
     width: 100%;
     border-right: none;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-width: 1199px) {
+  .header__wrap {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .header__wrap {
+    width: 100%;
   }
 }

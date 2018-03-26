@@ -127,7 +127,7 @@ add_action('widgets_init', 'vp_widgets_init');
 function vp_scripts()
 {
     wp_enqueue_style('vp-style', get_stylesheet_uri());
-    wp_enqueue_style('vp-style-main', get_template_directory_uri() . '/assets/css/main.min.css', array(), time(), 'all');
+    wp_enqueue_style('vp-style-main', get_template_directory_uri() . '/assets/css/main.min.css', array(), '', 'all');
     wp_enqueue_style('vp-style-vendor', get_template_directory_uri() . '/assets/css/vendor.min.css');
     wp_enqueue_style('vp-fa', get_template_directory_uri() . '/fa-svg-with-js.css');
 
@@ -141,7 +141,7 @@ function vp_scripts()
     wp_enqueue_script('vp-fontawesome', get_template_directory_uri() . '/js/fontawesome-all.min.js', [], '', true);
     wp_enqueue_script('jquery');
     wp_enqueue_script('vp-vendor', get_template_directory_uri() . '/assets/js/vendor.min.js', array('jquery'), '', true);
-    wp_enqueue_script('vp-main', get_template_directory_uri() . '/assets/js/main.min.js', array('jquery'), time(), true);
+    wp_enqueue_script('vp-main', get_template_directory_uri() . '/assets/js/main.min.js', array('jquery'), '', true);
 }
 
 add_action('wp_enqueue_scripts', 'vp_scripts');
@@ -175,7 +175,7 @@ if (defined('JETPACK__VERSION')) {
 
 require get_template_directory() . '/inc/admin-panel.php';
 
-function add_menu_classes($classes, $item, $args)
+function agd_menu_classes($classes, $item, $args)
 {
     if ($args->theme_location == 'menu-1') {
         $classes[] = 'hvr-fade';
@@ -183,4 +183,4 @@ function add_menu_classes($classes, $item, $args)
     return $classes;
 }
 
-add_filter('nav_menu_css_class', 'add_menu_classes', 1, 3);
+add_filter('nav_menu_css_class', 'agd_menu_classes', 1, 3);

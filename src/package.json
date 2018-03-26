@@ -29,6 +29,7 @@
     "vinyl-ftp": "^0.6.1"
   },
   "dependencies": {
-    "bootstrap-4-grid": "^2.3.0"
+    "bootstrap-4-grid": "^2.3.0",
+    "npm": "^5.8.0"
   }
 }
