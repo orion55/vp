@@ -10,10 +10,12 @@ jQuery(document).ready(function ($) {
 
     hasChildren.hover(
         function () {
-            $(this).find('.sub-menu').show();
+            // $(this).find('.sub-menu').show();
+            $('ul', this).stop().slideDown(100);
         },
         function () {
-            $(this).find('.sub-menu').hide();
+            // $(this).find('.sub-menu').hide();
+            $('ul', this).stop().slideUp(100);
         }
     );
 
@@ -21,6 +23,7 @@ jQuery(document).ready(function ($) {
         e.preventDefault();
     });
 
+    $('.services').css('padding-top', $('.slider').height() + 'px');
 });
 jQuery(document).ready(function ($) {
 

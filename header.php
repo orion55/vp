@@ -17,8 +17,7 @@
             'menu_class' => 'menu',
             'theme_location' => 'menu-1',
             'container' => 'nav'
-        ));
-        ?>
+        )); ?>
     </div>
 </header>
 <div class="info">
@@ -43,7 +42,7 @@
                     $phone_text = $phone1;
                 endif; ?>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/info/phone.png" alt="phone"
-                     class="info__icon">
+                     class="info__icon info__icon--phone">
                 <a href="tel:<?php echo $phone_href ?>" class="info__phone-number"><?php echo $phone_text ?></a>
             </div>
             <div class="info__phone">
@@ -54,7 +53,7 @@
                     $phone_text = $phone2;
                 endif; ?>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/info/phone1.png" alt="phone1"
-                     class="info__icon">
+                     class="info__icon info__icon--phone1">
                 <a href="tel:<?php echo $phone_href ?>" class="info__phone-number"><?php echo $phone_text ?></a>
             </div>
         </div>
