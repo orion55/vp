@@ -1,0 +1,32 @@
+@import "../base/_vars";
+
+.articles__wrap {
+  width: 1280px;
+  margin: 0 auto;
+  padding-bottom: 80px;
+}
+
+.articles__title {
+  font-size: 36px;
+  font-weight: 400;
+  text-align: center;
+  padding-bottom: 45px;
+  text-transform: uppercase;
+}
+
+.card__title--articles {
+  font-family: 'SegoeUIBold', 'Arial', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 20px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.articles__row {
+  flex-flow: row wrap;
+}
+
+.articles__main {
+  padding-bottom: 20px;
+}

@@ -1196,6 +1196,7 @@ ul.sub-menu .menu-item {
 	width: 1280px;
 	margin: 0 auto;
 	padding-top: 80px;
+	padding-bottom: 80px;
 }
 
 .services__title {
@@ -1207,6 +1208,7 @@ ul.sub-menu .menu-item {
 }
 
 .card {
+	height: 100%;
 	margin-bottom: 20px;
 	border: #dadada solid 1px;
 }
@@ -1226,13 +1228,20 @@ ul.sub-menu .menu-item {
 }
 
 .card__body {
+	display: flex;
+	flex-direction: column;
+	height: calc(100% - 299px);
+	padding-right: 10px;
+	padding-bottom: 40px;
+	padding-left: 10px;
 	text-align: center;
+	align-items: center;
 }
 
 .card__title {
 	font-size: 22px;
 	font-weight: 400;
-	padding-bottom: 42px;
+	padding-bottom: 20px;
 	text-align: center;
 	text-transform: uppercase;
 }
@@ -1240,10 +1249,57 @@ ul.sub-menu .menu-item {
 .card__link {
 	font-size: 16px;
 	font-weight: 400;
-	margin-bottom: 40px;
+	display: block;
+	margin-top: auto;
 	padding: 14px 50px;
 	text-transform: uppercase;
 	border-radius: 15px;
+	align-self: center;
+}
+
+.card__link:visited {
+	color: #d9d9d9;
+}
+
+.card-text {
+	margin-bottom: 0;
+	text-align: left;
+	flex: 1;
+}
+
+.services__main {
+	padding-bottom: 20px;
+}
+
+.articles__wrap {
+	width: 1280px;
+	margin: 0 auto;
+	padding-bottom: 80px;
+}
+
+.articles__title {
+	font-size: 36px;
+	font-weight: 400;
+	padding-bottom: 45px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.card__title--articles {
+	font-family: 'SegoeUIBold', 'Arial', sans-serif;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 20px;
+	padding-bottom: 20px;
+	text-align: center;
+}
+
+.articles__row {
+	flex-flow: row wrap;
+}
+
+.articles__main {
+	padding-bottom: 20px;
 }
 
 @media (min-width: 576px) {
@@ -3888,6 +3944,10 @@ ul.sub-menu .menu-item {
 	width: 100%;
 }
 
+.services__wrap {
+	width: 100%;
+}
+
 }
 
 @media only screen and (max-width: 767px) {
@@ -3930,6 +3990,10 @@ ul.sub-menu .menu-item {
 
 .info__phone--one {
 	padding-bottom: 20px;
+}
+
+.services__wrap {
+	width: 100%;
 }
 
 }

@@ -4,6 +4,7 @@
   width: 1280px;
   margin: 0 auto;
   padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 .services__title {
@@ -17,6 +18,7 @@
 .card {
   border: #dadada solid 1px;
   margin-bottom: 20px;
+  height: 100%;
 }
 
 .card__pict {
@@ -34,6 +36,13 @@
 
 .card__body {
   text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: calc(100% - 299px);
+  padding-bottom: 40px;
 }
 
 .card__title {
@@ -41,7 +50,7 @@
   font-weight: 400;
   text-align: center;
   text-transform: uppercase;
-  padding-bottom: 42px;
+  padding-bottom: 20px;
 }
 
 .card__link {
@@ -49,6 +58,34 @@
   border-radius: 15px;
   font-size: 16px;
   font-weight: 400;
-  margin-bottom: 40px;
+  //margin-bottom: 40px;
   text-transform: uppercase;
+  display: block;
+  align-self: center;
+  margin-top: auto;
+  &:visited {
+    color: darken(white, 15%);
+  }
+}
+
+.card-text {
+  text-align: left;
+  margin-bottom: 0;
+  flex: 1;
+}
+
+.services__main {
+  padding-bottom: 20px;
+}
+
+@media only screen and (min-device-width: 768px) and (max-width: 1199px) {
+  .services__wrap {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .services__wrap {
+    width: 100%;
+  }
 }
