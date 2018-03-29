@@ -19,11 +19,11 @@
                     setup_postdata($post); ?>
                     <div class="col-sm-12 col-md-6 col-xl-4 services__main">
                         <div class="card ">
-                            <div class="card__pict">
+                            <a class="card__pict" href="<?php the_permalink(); ?>">
                                 <img class="card__img"
                                      src="<?php if (has_post_thumbnail()) : the_post_thumbnail_url('post-thumbnail'); endif; ?>"
                                      alt="Card image cap">
-                            </div>
+                            </a>
                             <div class="card__body">
                                 <h3 class="card__title"><?php the_title(); ?></h3>
                                 <a href="<?php the_permalink(); ?>"
@@ -42,7 +42,7 @@
 
 <div class="articles">
     <div class="articles__wrap">
-        <div class="articles__title">Последние статьи</div>
+        <h3 class="articles__title">Последние статьи</h3>
         <div class="articles__cards container">
             <div class="articles__row row">
                 <?php
@@ -59,15 +59,14 @@
                     setup_postdata($post); ?>
                     <div class="col-sm-12 col-md-6 col-xl-4 articles__main">
                         <div class="card">
-                            <div class="card__pict">
+                            <a class="card__pict" href="<?php the_permalink(); ?>">
                                 <img class="card__img"
                                      src="<?php if (has_post_thumbnail()) : the_post_thumbnail_url('post-thumbnail'); endif; ?>"
                                      alt="Card image cap">
-                            </div>
-                            <div class="card__body">
+                            </a>
+                            <div class="card__body card__body--articles">
                                 <h3 class="card__title card__title--articles"><?php the_title(); ?></h3>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
+                                <div class="card-text"><?php the_excerpt(); ?></div>
                                 <a href="<?php the_permalink(); ?>"
                                    class="card__link pure-button hvr-shutter-in-horizontal">Подробнее</a>
                             </div>
@@ -78,7 +77,43 @@
                 wp_reset_postdata();
                 ?>
             </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-xl-12 articles__arrows arrow">
+                    <div id="prevArrow" class="arrow__prev hvr-grow">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/articles/back.png"
+                             alt="prevArrow" class="arrow__img">
+                    </div>
+                    <div id="nextArrow" class="arrow__next hvr-grow">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/articles/forward.png"
+                             alt="nextArrow" class="arrow__img">
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
+</div>
+
+<div class="salon">
+    <div class="salon__wrap">
+        <h1 class="salon__title">О салоне</h1>
+        <div class="salon__text">
+            <p>Суждение индуцирует здравый смысл. Дедуктивный метод прост. Освобождение, следовательно, контролирует
+                позитивизм. Идеи гедонизма занимают центральное место в утилитаризме Милля и Бентама, однако
+                отношение к современности реально оспособляет закон внешнего мира. Дедуктивный метод, как следует из
+                вышесказанного, ясен не всем.</p>
+            <p>Культ джайнизма включает в себя поклонение Махавире и другим тиртханкарам, поэтому реальность вырождена.
+                Даосизм выводит здравый смысл. Можно предположить, что позитивизм оспособляет онтологический
+                гедонизм.</p>
+            <p>Созерцание естественно дискредитирует примитивный закон внешнего мира. Даосизм дискредитирует бабувизм.
+                Надо сказать, что аналогия непредвзято понимает под собой структурализм,
+                хотя в официозе принято обратное.
+                Ощущение мира ментально выводит трансцендентальный гедонизм.</p>
+        </div>
+        <div class="salon__button">
+            <a href="#"
+               class="card__link pure-button hvr-shutter-in-horizontal salon__btn">Подробнее</a>
+        </div>
+
     </div>
 </div>
 

@@ -184,3 +184,10 @@ function agd_menu_classes($classes, $item, $args)
 }
 
 add_filter('nav_menu_css_class', 'agd_menu_classes', 1, 3);
+
+function custom_excerpt_length($length)
+{
+    return 20;
+}
+
+add_filter('excerpt_length', 'custom_excerpt_length', 999);

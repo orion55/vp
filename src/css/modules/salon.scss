@@ -1,0 +1,32 @@
+@import "../base/_vars";
+
+.salon__wrap {
+  width: 1110px;
+  margin: 0 auto;
+  padding-bottom: 80px;
+}
+
+.salon__btn {
+  display: inline-block;
+}
+
+.salon__title {
+  font-size: 36px;
+  font-weight: 400;
+  text-align: center;
+  padding-bottom: 45px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.salon__text {
+  padding-bottom: 45px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+}
+
+.salon__button {
+  text-align: center;
+}

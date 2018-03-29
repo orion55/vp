@@ -19,6 +19,10 @@
   border: #dadada solid 1px;
   margin-bottom: 20px;
   height: 100%;
+  transition-duration: .3s;
+  &:hover {
+    border: $color-main solid 1px;
+  }
 }
 
 .card__pict {
@@ -26,6 +30,7 @@
   width: 100%;
   margin: 0;
   padding-bottom: 22px;
+  display: block;
 }
 
 .card__img {
@@ -43,6 +48,10 @@
   align-items: center;
   height: calc(100% - 299px);
   padding-bottom: 40px;
+}
+
+.card__body--articles {
+  height: 345px;
 }
 
 .card__title {
