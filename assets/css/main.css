@@ -158,7 +158,8 @@ a:hover {
 	left: 0;
 }
 
-.pure-button {
+.pure-button,
+input.pure-button {
 	line-height: normal; /* Structure */
 	display: inline-block;
 	zoom: 1;
@@ -180,7 +181,8 @@ a:hover {
 	border: 0;
 }
 
-.pure-button {
+.pure-button,
+input.pure-button {
 	font-family: inherit;
 	font-size: 100%;
 	transition-delay: .5s;
@@ -191,7 +193,9 @@ a:hover {
 
 .pure-button-hover,
 .pure-button:hover,
-.pure-button:focus {
+.pure-button:focus,
+input.pure-button:hover,
+input.pure-button:focus {
 	color: white;
 }
 
@@ -201,7 +205,8 @@ a:hover {
 
 /* Shutter In Horizontal */
 
-.hvr-shutter-in-horizontal {
+.hvr-shutter-in-horizontal,
+input.hvr-shutter-in-horizontal {
 	position: relative;
 	display: inline-block;
 	transition-duration: .3s;
@@ -214,7 +219,8 @@ a:hover {
 	box-shadow: 0 0 1px transparent;
 }
 
-.hvr-shutter-in-horizontal:before {
+.hvr-shutter-in-horizontal:before,
+input.hvr-shutter-in-horizontal:before {
 	position: absolute;
 	z-index: -1;
 	top: 0;
@@ -1256,7 +1262,8 @@ ul.sub-menu .menu-item {
 	text-transform: uppercase;
 }
 
-.card__link {
+.card__link,
+input.card__link {
 	font-size: 16px;
 	font-weight: 400;
 	display: block;
@@ -1267,7 +1274,8 @@ ul.sub-menu .menu-item {
 	align-self: center;
 }
 
-.card__link:visited {
+.card__link:visited,
+input.card__link:visited {
 	color: #d9d9d9;
 }
 
@@ -1354,8 +1362,74 @@ ul.sub-menu .menu-item {
 	text-align: left;
 }
 
+.salon__text p {
+	margin-bottom: 16px;
+}
+
+.salon__text p:last-child {
+	margin-bottom: 0;
+}
+
 .salon__button {
 	text-align: center;
+}
+
+.contact {
+	background: #fff url('../img/contact/background.jpg') no-repeat center top;
+}
+
+.contact__wrap {
+	width: 1110px;
+	margin: 0 auto;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+div.wpcf7 {
+	width: 820px;
+	margin: 0 auto;
+	padding-top: 40px;
+	padding-bottom: 20px;
+	text-align: center;
+	border: #bf67cb solid 9px;
+	border-radius: 20px;
+	background: #fdfefe;
+}
+
+.contact__title {
+	font-size: 30px;
+	font-weight: 400;
+	line-height: 20px;
+	padding-bottom: 50px;
+}
+
+input.wpcf7-text {
+	width: 400px;
+	height: 40px;
+	padding-left: 15px;
+	border-radius: 15px;
+	background-color: #fff;
+	box-shadow: inset 0 2px 3px lightgrey;
+}
+
+.contact__name {
+	padding-bottom: 20px;
+}
+
+.contact__phone {
+	padding-bottom: 30px;
+}
+
+input.contact__btn {
+	line-height: normal;
+	margin: 0 auto;
+	border: none;
+	background: linear-gradient(180deg, #bf67cb 0, #d893e0 100%);
+}
+
+div.wpcf7-response-output {
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 @media (min-width: 576px) {

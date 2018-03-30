@@ -72,7 +72,7 @@
   z-index: -1;
 }
 
-.pure-button {
+.pure-button, input.pure-button {
   /* Structure */
   display: inline-block;
   zoom: 1;
@@ -91,7 +91,7 @@
   border: 0;
 }
 
-.pure-button {
+.pure-button, input.pure-button {
   font-family: inherit;
   font-size: 100%;
   background: linear-gradient(180deg, #bf67cb 0%, #d893e0 100%);
@@ -100,7 +100,7 @@
   transition-delay: .5s;
 }
 
-.pure-button-hover, .pure-button:hover, .pure-button:focus {
+.pure-button-hover, .pure-button:hover, .pure-button:focus, input.pure-button:hover, input.pure-button:focus {
   //filter: alpha(opacity=90);
   //background: linear-gradient(180deg, #6b64ac 0%, #9087c2 100%);
   color: white;
@@ -111,7 +111,7 @@
 }
 
 /* Shutter In Horizontal */
-.hvr-shutter-in-horizontal {
+.hvr-shutter-in-horizontal, input.hvr-shutter-in-horizontal {
   display: inline-block;
   vertical-align: middle;
   transform: perspective(1px) translateZ(0);
@@ -123,7 +123,7 @@
   border-radius: 15px;
 }
 
-.hvr-shutter-in-horizontal:before {
+.hvr-shutter-in-horizontal:before, input.hvr-shutter-in-horizontal:before {
   content: "";
   position: absolute;
   z-index: -1;

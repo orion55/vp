@@ -99,7 +99,8 @@ if (!empty($page)) { ?>
         <div class="salon__wrap">
             <h1 class="salon__title"><?php echo $page->post_title ?></h1>
             <div class="salon__text">
-                <?php echo $page->post_content ?>
+                <?php $parts = get_extended($page->post_content);
+                echo apply_filters('the_content', $parts['main']); ?>
             </div>
             <div class="salon__button">
                 <a href="<?php echo $page->guid ?>"
@@ -109,5 +110,11 @@ if (!empty($page)) { ?>
         </div>
     </div>
 <?php } ?>
+
+<div class="contact">
+    <div class="contact__wrap">
+        <?php echo do_shortcode('[contact-form-7 id="78" title="Контактная форма 1"]'); ?>
+    </div>
+</div>
 
 <?php get_footer(); ?>

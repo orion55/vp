@@ -25,6 +25,12 @@
   font-weight: 400;
   //line-height: 20px;
   text-align: left;
+  & p {
+    margin-bottom: 16px;
+  }
+  & p:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .salon__button {

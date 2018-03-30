@@ -1,0 +1,59 @@
+@import "../base/_vars";
+
+.contact {
+  background: #ffffff url("../img/contact/background.jpg") no-repeat center top;
+}
+
+.contact__wrap {
+  width: 1110px;
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+div.wpcf7 {
+  width: 820px;
+  margin: 0 auto;
+  border: #bf67cb solid 9px;
+  border-radius: 20px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  text-align: center;
+  background: #fdfefe;
+}
+
+.contact__title {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 20px;
+  padding-bottom: 50px;
+}
+
+input.wpcf7-text {
+  border-radius: 15px;
+  background-color: #ffffff;
+  width: 400px;
+  height: 40px;
+  padding-left: 15px;
+  box-shadow: inset 0 2px 3px lightgrey;
+}
+
+.contact__name {
+  padding-bottom: 20px;
+}
+
+.contact__phone {
+  padding-bottom: 30px;
+}
+
+input.contact__btn {
+  border: none;
+  line-height: normal;
+  margin: 0 auto;
+  background: linear-gradient(180deg, #bf67cb 0, #d893e0 100%);
+}
+
+div.wpcf7-response-output {
+  margin-top: 0;
+  margin-bottom: 0;
+}
