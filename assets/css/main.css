@@ -1350,9 +1350,8 @@ ul.sub-menu .menu-item {
 .salon__text {
 	font-size: 16px;
 	font-weight: 400;
-	line-height: 20px;
 	padding-bottom: 45px;
-	text-align: center;
+	text-align: left;
 }
 
 .salon__button {
@@ -4009,6 +4008,12 @@ ul.sub-menu .menu-item {
 	width: 100%;
 }
 
+.salon__wrap {
+	width: 100%;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
 }
 
 @media only screen and (max-width: 767px) {
@@ -4084,6 +4089,12 @@ ul.sub-menu .menu-item {
 
 .card-text {
 	font-size: 14px;
+}
+
+.salon__wrap {
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
 }
 
 }
