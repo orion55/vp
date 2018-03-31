@@ -16,14 +16,29 @@
                         &copy; 2018 | <a href="<?php echo home_url(); ?>" class="footer__link">victoria-pikalova.ru</a>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-5 col-xl-5 footer__two">
-                    <a href="#" class="footer__url"><i class="fab fa-twitter footer__icon"></i></a>
-                    <a href="#" class="footer__url"><i class="fab fa-vk footer__icon"></i></a>
-                    <a href="#" class="footer__url"><i class="fab fa-facebook-f footer__icon"></i></a>
-                    <a href="#" class="footer__url"><i class="fab fa-instagram footer__icon"></i></a>
-                    <a href="#" class="footer__url"><i class="fab fa-odnoklassniki footer__icon"></i></a>
+                <div class="col-sm-12 col-md-4 col-xl-5 footer__two">
+                    <?php $link = carbon_get_theme_option('crb_social_url_twitter');
+                    if (!empty($link))
+                        echo '<a href="' . $link . '" class="footer__url"><i class="fab fa-twitter footer__icon"></i></a>';
+
+                    $link = carbon_get_theme_option('crb_social_url_vk');
+                    if (!empty($link))
+                        echo '<a href="' . $link . '" class="footer__url"><i class="fab fa-vk footer__icon"></i></a>';
+
+                    $link = carbon_get_theme_option('crb_social_url_facebook');
+                    if (!empty($link))
+                        echo '<a href="' . $link . '" class="footer__url"><i class="fab fa-facebook-f footer__icon"></i></a>';
+
+                    $link = carbon_get_theme_option('crb_social_url_instagram');
+                    if (!empty($link))
+                        echo '<a href="' . $link . '" class="footer__url"><i class="fab fa-instagram footer__icon"></i></a>';
+
+                    $link = carbon_get_theme_option('crb_social_url_ok');
+                    if (!empty($link))
+                        echo '<a href="' . $link . '" class="footer__url"><i class="fab fa-odnoklassniki footer__icon"></i></a>';
+                    ?>
                 </div>
-                <div class="col-sm-12 col-md-3 col-xl-3 footer__three">
+                <div class="col-sm-12 col-md-4 col-xl-3 footer__three">
                     <div class="info__phone info__phone--one">
                         <?php $phone1 = carbon_get_theme_option('crb_phone1');
                         $phone_href = '+74957773535';

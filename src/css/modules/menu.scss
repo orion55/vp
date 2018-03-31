@@ -1,5 +1,7 @@
 .header {
   background: linear-gradient(180deg, #bf67cb 0%, #d893e0 100%);
+  position: relative;
+  z-index: 10000;
 }
 
 .header__wrap {
@@ -40,7 +42,7 @@ ul.sub-menu {
   background-color: #bf67cb;
   width: 100%;
   display: none;
-  z-index: 1000;
+  z-index: 100000000;
   margin-left: 0;
   & .menu-item {
     width: 100%;
