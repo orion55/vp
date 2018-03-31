@@ -70,6 +70,16 @@ a:hover {
 	src: url('../fonts/SegoeUISemiBold/SegoeUISemiBold.eot?#iefix') format('embedded-opentype'), url('../fonts/SegoeUISemiBold/SegoeUISemiBold.woff') format('woff'), url('../fonts/SegoeUISemiBold/SegoeUISemiBold.ttf') format('truetype');
 }
 
+::-moz-selection {
+	color: white;
+	background-color: #d187da;
+}
+
+::selection {
+	color: white;
+	background-color: #d187da;
+}
+
 /* Bounce To Top */
 
 .hvr-bounce-to-top {
@@ -1292,7 +1302,7 @@ input.card__link:visited {
 .articles__wrap {
 	width: 1280px;
 	margin: 0 auto;
-	padding-bottom: 80px;
+	padding-bottom: 40px;
 }
 
 .articles__title {
@@ -1391,7 +1401,7 @@ div.wpcf7 {
 	padding-top: 40px;
 	padding-bottom: 20px;
 	text-align: center;
-	border: #bf67cb solid 9px;
+	border: #bf67cb solid 7px;
 	border-radius: 20px;
 	background: #fdfefe;
 }
@@ -1412,12 +1422,17 @@ input.wpcf7-text {
 	box-shadow: inset 0 2px 3px lightgrey;
 }
 
+input.wpcf7-text:focus {
+	border: 1px solid #d187da;
+	box-shadow: 0 0 5px #d187da;
+}
+
 .contact__name {
 	padding-bottom: 20px;
 }
 
 .contact__phone {
-	padding-bottom: 30px;
+	padding-bottom: 20px;
 }
 
 input.contact__btn {
@@ -1430,6 +1445,82 @@ input.contact__btn {
 div.wpcf7-response-output {
 	margin-top: 0;
 	margin-bottom: 0;
+}
+
+.contact__captcha div {
+	margin: 0 auto 20px;
+}
+
+.footer__wrap {
+	width: 1110px;
+	margin: 0 auto;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+.footer__one {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer__pict {
+	width: 127px;
+	height: 100%;
+	padding-right: 20px;
+}
+
+.footer__img {
+	width: 100%;
+	height: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+}
+
+.footer__link {
+	transition: .3s;
+	color: black;
+}
+
+.footer__link:hover,
+.footer__link:visited {
+	color: #d187da;
+}
+
+svg.footer__icon {
+	font-size: 24px;
+	color: white;
+}
+
+.footer__two {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer__url {
+	display: block;
+	width: 45px;
+	height: 45px;
+	margin-right: 10px;
+	padding: 10px;
+	transition: .3s;
+	text-align: center;
+	border-radius: 25px;
+	background-color: #c0c0c0;
+}
+
+.footer__url:hover {
+	background: #d187da;
+}
+
+.footer__three {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-end;
 }
 
 @media (min-width: 576px) {
@@ -4088,6 +4179,15 @@ div.wpcf7-response-output {
 	padding-left: 20px;
 }
 
+.contact__wrap {
+	width: 100%;
+	padding: 40px 20px;
+}
+
+div.wpcf7 {
+	width: 100%;
+}
+
 }
 
 @media only screen and (max-width: 767px) {
@@ -4163,12 +4263,26 @@ div.wpcf7-response-output {
 
 .card-text {
 	font-size: 14px;
+	padding-bottom: 20px;
 }
 
 .salon__wrap {
 	width: 100%;
 	padding-right: 15px;
 	padding-left: 15px;
+}
+
+.contact__wrap {
+	width: 100%;
+	padding: 40px 10px;
+}
+
+div.wpcf7 {
+	width: 100%;
+}
+
+input.wpcf7-text {
+	width: 90%;
 }
 
 }

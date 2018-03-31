@@ -14,7 +14,7 @@
 div.wpcf7 {
   width: 820px;
   margin: 0 auto;
-  border: #bf67cb solid 9px;
+  border: #bf67cb solid 7px;
   border-radius: 20px;
   padding-top: 40px;
   padding-bottom: 20px;
@@ -36,6 +36,10 @@ input.wpcf7-text {
   height: 40px;
   padding-left: 15px;
   box-shadow: inset 0 2px 3px lightgrey;
+  &:focus {
+    box-shadow: 0 0 5px $color-main;
+    border: 1px solid $color-main;
+  }
 }
 
 .contact__name {
@@ -43,7 +47,7 @@ input.wpcf7-text {
 }
 
 .contact__phone {
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 }
 
 input.contact__btn {
@@ -56,4 +60,31 @@ input.contact__btn {
 div.wpcf7-response-output {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.contact__captcha div {
+  margin: 0 auto 20px;
+}
+
+@media only screen and (min-device-width: 768px) and (max-width: 1199px) {
+  .contact__wrap {
+    width: 100%;
+    padding: 40px 20px;
+  }
+  div.wpcf7 {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .contact__wrap {
+    width: 100%;
+    padding: 40px 10px;
+  }
+  div.wpcf7 {
+    width: 100%;
+  }
+  input.wpcf7-text {
+    width: 90%;
+  }
 }
