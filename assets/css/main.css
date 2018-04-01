@@ -1315,6 +1315,14 @@ input.card__link:visited {
 	flex: 1;
 }
 
+.card-price {
+	font-family: 'SegoeUIBold', 'Arial', sans-serif;
+	font-size: 36px;
+	font-weight: 600;
+	padding-bottom: 30px;
+	color: #000;
+}
+
 .services__main {
 	padding-bottom: 20px;
 }
@@ -1471,6 +1479,10 @@ div.wpcf7-response-output {
 	margin: 0 auto 20px;
 }
 
+.footer {
+	border-top: #f5f5f5 solid 20px;
+}
+
 .footer__wrap {
 	width: 1110px;
 	margin: 0 auto;
@@ -1541,6 +1553,66 @@ svg.footer__icon {
 	flex-direction: column;
 	justify-content: center;
 	align-items: flex-end;
+}
+
+.school__wrap {
+	width: 1280px;
+	margin: 0 auto;
+	padding-bottom: 80px;
+}
+
+.school__title {
+	font-size: 36px;
+	font-weight: 400;
+	margin: 0;
+	padding-bottom: 45px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.cat {
+	display: flex;
+	flex-direction: row;
+	padding-top: 40px;
+	padding-bottom: 25px;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.cat-item {
+	width: 30%;
+	margin-bottom: 20px;
+	padding-top: 11px;
+	padding-bottom: 11px;
+	cursor: pointer;
+	text-align: center;
+	border: #d187da solid 1px;
+	border-radius: 25px;
+}
+
+.cat-item a {
+	font-size: 24px;
+	font-weight: 400;
+	text-transform: uppercase;
+	color: #000;
+}
+
+.cat-item:hover {
+	border: none;
+	background-color: #7460a3;
+}
+
+.cat-item:hover a {
+	color: white;
+}
+
+.current-cat {
+	background-color: #d187da;
+}
+
+.current-cat a {
+	color: white;
 }
 
 @media (min-width: 576px) {

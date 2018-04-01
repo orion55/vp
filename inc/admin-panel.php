@@ -28,4 +28,18 @@ function crb_attach_theme_options()
                     ->set_help_text('Ссылка на страницу Одноклассники'),
             )
         );
+
+    Container::make('post_meta', __('Опции курса', 'crb'))
+        ->where('post_type', '=', 'page')
+        ->where('post_term', '=', array(
+            'value' => 'shkola',
+            'field' => 'slug',
+            'taxonomy' => 'category',
+        ))
+        ->add_fields(array(
+            Field::make('rich_text', 'desc_service', 'Краткое описание курса'),
+            Field::make('text', 'price_service', 'Цена курса')
+                ->set_attribute('type', 'number')
+                ->set_attribute('min', '0')
+        ));
 }

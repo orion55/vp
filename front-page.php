@@ -19,11 +19,13 @@
                     setup_postdata($post); ?>
                     <div class="col-sm-12 col-md-6 col-xl-4 services__main">
                         <div class="card ">
-                            <a class="card__pict" href="<?php the_permalink(); ?>">
-                                <img class="card__img"
-                                     src="<?php if (has_post_thumbnail()) : the_post_thumbnail_url('post-thumbnail'); endif; ?>"
-                                     alt="Card image cap">
-                            </a>
+                            <?php if (has_post_thumbnail()) : ?>
+                                <a class="card__pict" href="<?php the_permalink(); ?>">
+                                    <img class="card__img"
+                                         src="<?php the_post_thumbnail_url('post-thumbnail'); ?>"
+                                         alt="Card image cap">
+                                </a>
+                            <?php endif; ?>
                             <div class="card__body">
                                 <h3 class="card__title"><?php the_title(); ?></h3>
                                 <a href="<?php the_permalink(); ?>"
@@ -59,11 +61,13 @@
                     setup_postdata($post); ?>
                     <div class="col-sm-12 col-md-6 col-xl-4 articles__main">
                         <div class="card">
-                            <a class="card__pict" href="<?php the_permalink(); ?>">
-                                <img class="card__img"
-                                     src="<?php if (has_post_thumbnail()) : the_post_thumbnail_url('post-thumbnail'); endif; ?>"
-                                     alt="Card image cap">
-                            </a>
+                            <?php if (has_post_thumbnail()) : ?>
+                                <a class="card__pict" href="<?php the_permalink(); ?>">
+                                    <img class="card__img"
+                                         src="<?php the_post_thumbnail_url('post-thumbnail'); ?>"
+                                         alt="Card image cap">
+                                </a>
+                            <?php endif; ?>
                             <div class="card__body card__body--articles">
                                 <h3 class="card__title card__title--articles"><?php the_title(); ?></h3>
                                 <div class="card-text"><?php the_excerpt(); ?></div>
@@ -111,10 +115,6 @@ if (!empty($page)) { ?>
     </div>
 <?php } ?>
 
-<div class="contact">
-    <div class="contact__wrap">
-        <?php echo do_shortcode('[contact-form-7 id="78" title="Контактная форма"]'); ?>
-    </div>
-</div>
+<?php get_template_part('inc/contact'); ?>
 
 <?php get_footer(); ?>

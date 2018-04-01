@@ -1,7 +1,7 @@
 @import "../base/_vars";
 
 .footer {
-
+  border-top: #f5f5f5 solid 20px;
 }
 
 .footer__wrap {
@@ -97,7 +97,7 @@ svg.footer__icon {
   .footer__three {
     align-items: center;
   }
-  .footer__two{
+  .footer__two {
     order: 1;
   }
 }

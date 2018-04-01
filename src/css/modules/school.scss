@@ -1,0 +1,57 @@
+@import "../base/_vars";
+
+.school__wrap {
+  width: 1280px;
+  margin: 0 auto;
+  padding-bottom: 80px;
+}
+
+.school__title {
+  font-size: 36px;
+  font-weight: 400;
+  text-align: center;
+  padding-bottom: 45px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.cat {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 25px;
+}
+
+.cat-item {
+  width: 30%;
+  border: $color-main solid 1px;
+  border-radius: 25px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  text-align: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+  a {
+    color: #000000;
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  &:hover {
+    background-color: $color-two;
+    border: none;
+    a {
+      color: white;
+    }
+  }
+}
+
+.current-cat {
+  background-color: $color-main;
+  a {
+    color: white;
+  }
+}
