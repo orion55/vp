@@ -37,7 +37,7 @@ function crb_attach_theme_options()
             'taxonomy' => 'category',
         ))
         ->add_fields(array(
-            Field::make('rich_text', 'desc_service', 'Краткое описание курса'),
+            Field::make('textarea', 'desc_service', 'Краткое описание курса'),
             Field::make('text', 'price_service', 'Цена курса')
                 ->set_attribute('type', 'number')
                 ->set_attribute('min', '0')

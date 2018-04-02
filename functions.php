@@ -173,7 +173,12 @@ if (defined('JETPACK__VERSION')) {
     require get_template_directory() . '/inc/jetpack.php';
 }
 
+if (WP_DEBUG && WP_DEBUG_DISPLAY && (defined('DOING_AJAX') && DOING_AJAX)) {
+    @ ini_set('display_errors', 1);
+}
+
 require get_template_directory() . '/inc/admin-panel.php';
+require get_template_directory() . '/inc/ajax-cat.php';
 
 function agd_menu_classes($classes, $item, $args)
 {

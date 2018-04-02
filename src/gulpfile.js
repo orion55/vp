@@ -17,6 +17,7 @@ var browserSync = require('browser-sync').create();
 var reload = browserSync.reload;
 var gutil = require('gulp-util');
 var ftp = require('vinyl-ftp');
+var babel = require("gulp-babel");
 
 var docs = '../assets/';
 var subfolder = 'css';
@@ -50,6 +51,7 @@ gulp.task('sass', function () {
 gulp.task('js', function () {
     subfolder = 'js';
     gulp.src(['./js/*.js'])
+        .pipe(babel())
         .pipe(concat('main.js'))
         .pipe(gulp.dest(docs + 'js/'))
         .pipe(rename({

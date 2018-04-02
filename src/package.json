@@ -6,9 +6,12 @@
   "url": "",
   "license": "MIT License",
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "browser-sync": "*",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "*",
+    "gulp-babel": "^7.0.1",
     "gulp-cache": "*",
     "gulp-clean-css": "*",
     "gulp-concat": "*",

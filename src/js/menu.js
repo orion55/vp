@@ -1,4 +1,5 @@
 jQuery(document).ready(function ($) {
+
     var menu = $('#menu-topmenu');
     var hasChildren = menu.find(".menu-item-has-children");
 
