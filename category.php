@@ -1,18 +1,11 @@
 <?php get_header();
-$cur_cat_name = 'Школа'; //наименование родительской категории
-$cur_subcat_name = 'Полные курсы'; //наименование активной категории
 
-$cur_cat_id = get_cat_ID($cur_cat_name);
-$cur_subcat_id = get_cat_ID($cur_subcat_name);
+$categories = get_the_category();
+$cur_subcat_id = $categories[0]->cat_ID;
 ?>
 
     <div class="school">
         <div class="school__wrap">
-            <div class="school__category">
-                <ul class="school__cat cat" id="school__cat">
-                    <?php wp_list_categories("orderby=name&show_count=0&hide_empty=0&use_desc_for_title=0&child_of=" . $cur_cat_id . "&hierarchical=0&title_li=&current_category=" . $cur_subcat_id); ?>
-                </ul>
-            </div>
             <div class="school__title"
                  id="school__title"><?php echo get_cat_name($cur_subcat_id); ?></div>
             <div class="school__cards container">

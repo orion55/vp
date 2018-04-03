@@ -35,7 +35,7 @@ jQuery(document).ready(function ($) {
                 if (data.success) {
                     let htmlResult = '';
                     data.data.forEach((item) => {
-                        let htmlString = `<div class="col-sm-12 col-md-6 col-xl-4 articles__main">
+                        let htmlString = `<div class="col-sm-12 col-md-6 col-xl-4 school__row">
                             <div class="card">`;
                         if ("thumbnail" in item) {
                             htmlString += `<a class="card__pict" href="${item.permalink}"><img class="card__img"

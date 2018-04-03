@@ -146,6 +146,13 @@
   border-radius: 15px;
 }
 
+a.hvr-inverse {
+  background: linear-gradient(180deg, #bf67cb 0%, #d893e0 100%);
+  &:before {
+    background: linear-gradient(180deg, #6b64ac 0%, #9087c2 100%);
+  }
+}
+
 .hvr-shutter-in-horizontal:hover, .hvr-shutter-in-horizontal:focus, .hvr-shutter-in-horizontal:active {
   color: white;
 }
@@ -171,4 +178,34 @@
 ::-webkit-scrollbar-thumb:horizontal {
   width: 5px;
   background-color: $color-main;
+}
+
+.widget-area {
+  & .widget-title {
+    color: #000000;
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+    border-top: $color-main solid 4px;
+    border-bottom: $color-main solid 4px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-bottom: 22px;
+    text-align: center;
+  }
+  & .cat-item {
+    padding-bottom: 28px;
+    font-size: 18px;
+    font-weight: 400;
+    & a {
+      color: black;
+      transition: .5s;
+      &:hover {
+        color: $color-main;
+      }
+    }
+    & .children {
+      padding-top: 22px;
+    }
+  }
 }

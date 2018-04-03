@@ -250,6 +250,14 @@ input.hvr-shutter-in-horizontal:before {
 	background: linear-gradient(180deg, #bf67cb 0%, #d893e0 100%);
 }
 
+a.hvr-inverse {
+	background: linear-gradient(180deg, #bf67cb 0%, #d893e0 100%);
+}
+
+a.hvr-inverse:before {
+	background: linear-gradient(180deg, #6b64ac 0%, #9087c2 100%);
+}
+
 .hvr-shutter-in-horizontal:hover,
 .hvr-shutter-in-horizontal:focus,
 .hvr-shutter-in-horizontal:active {
@@ -280,6 +288,38 @@ input.hvr-shutter-in-horizontal:before {
 ::-webkit-scrollbar-thumb:horizontal {
 	width: 5px;
 	background-color: #d187da;
+}
+
+.widget-area .widget-title {
+	font-size: 24px;
+	font-weight: 400;
+	margin-bottom: 22px;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #000;
+	border-top: #d187da solid 4px;
+	border-bottom: #d187da solid 4px;
+}
+
+.widget-area .cat-item {
+	font-size: 18px;
+	font-weight: 400;
+	padding-bottom: 28px;
+}
+
+.widget-area .cat-item a {
+	transition: .5s;
+	color: black;
+}
+
+.widget-area .cat-item a:hover {
+	color: #d187da;
+}
+
+.widget-area .cat-item .children {
+	padding-top: 22px;
 }
 
 /*!
@@ -1587,7 +1627,7 @@ svg.footer__icon {
 	align-items: center;
 }
 
-.cat-item {
+.school__cat .cat-item {
 	width: 30%;
 	margin-bottom: 20px;
 	padding-top: 11px;
@@ -1598,28 +1638,160 @@ svg.footer__icon {
 	border-radius: 25px;
 }
 
-.cat-item a {
+.school__cat .cat-item a {
 	font-size: 24px;
 	font-weight: 400;
 	text-transform: uppercase;
 	color: #000;
 }
 
-.cat-item:hover {
+.school__cat .cat-item:hover {
 	border: none;
 	background-color: #7460a3;
 }
 
-.cat-item:hover a {
+.school__cat .cat-item:hover a {
 	color: white;
 }
 
-.current-cat {
+.school__cat li.current-cat {
 	background-color: #d187da;
 }
 
-.current-cat a {
+.school__cat li.current-cat a {
 	color: white;
+}
+
+.school__row {
+	padding-bottom: 20px;
+	justify-content: center;
+}
+
+.blog {
+	padding-top: 40px;
+	padding-bottom: 80px;
+}
+
+.blog__wrap {
+	display: flex;
+	flex-direction: row;
+	width: 1280px;
+	margin: 0 auto;
+}
+
+.blog__title {
+	font-size: 36px;
+	font-weight: 400;
+	margin: 0;
+	padding-bottom: 40px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.item__title {
+	font-size: 30px;
+	font-weight: 400;
+	padding-bottom: 40px;
+}
+
+.item__body {
+	display: flex;
+	flex-direction: row;
+	padding-bottom: 19px;
+}
+
+.item__pict {
+	display: block;
+	overflow: hidden;
+	width: 295px;
+	height: 200px;
+	margin: 0 18px 0 0;
+	flex-basis: 295px;
+}
+
+.item__img {
+	width: 100%;
+	height: 100%;
+	transition: all 1s ease-out;
+	-o-object-fit: cover;
+	object-fit: cover;
+}
+
+.item__img:hover {
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.item__box {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+
+.item__link,
+input.item__link {
+	font-size: 16px;
+	font-weight: 400;
+	display: block;
+	margin-top: auto;
+	padding: 14px 50px;
+	text-transform: uppercase;
+	border-radius: 15px;
+	align-self: left;
+}
+
+.item__link:visited,
+input.item__link:visited {
+	color: #d9d9d9;
+}
+
+.item__meta {
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 38px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	border-top: #cecece solid 1px;
+	border-bottom: #cecece solid 1px;
+	align-items: center;
+	justify-content: left;
+}
+
+.item__icon {
+	margin-right: 12px;
+}
+
+.item__date,
+.item__cat {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: left;
+}
+
+.item__date svg,
+.item__cat svg {
+	font-size: 24px;
+	color: #8f8f8f;
+}
+
+.item__date {
+	padding-right: 34px;
+}
+
+.item__word {
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+}
+
+.item__word a {
+	transition: .5s;
+	color: #8f8f8f;
+}
+
+.item__word a:hover {
+	color: #d187da;
 }
 
 @media (min-width: 576px) {
@@ -4303,6 +4475,34 @@ div.wpcf7 {
 	margin-bottom: 10px;
 }
 
+.school__wrap {
+	width: 100%;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+.school__cat {
+	width: 100%;
+}
+
+.school__cat .cat-item {
+	width: 45%;
+}
+
+.school__row {
+	width: 100%;
+	margin: 0 auto;
+	padding-bottom: 20px;
+}
+
+.school__wrap {
+	padding-bottom: 0;
+}
+
+.cat-item a {
+	font-size: 22px;
+}
+
 }
 
 @media only screen and (max-width: 767px) {
@@ -4415,6 +4615,30 @@ input.wpcf7-text {
 
 .footer__two {
 	order: 1;
+}
+
+.school__wrap {
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+.school__cat {
+	width: 100%;
+}
+
+.school__cat .cat-item {
+	width: 100%;
+}
+
+.school__row {
+	width: 100%;
+	margin: 0 auto;
+	padding-bottom: 20px;
+}
+
+.school__wrap {
+	padding-bottom: 0;
 }
 
 }

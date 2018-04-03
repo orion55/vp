@@ -35,7 +35,7 @@ jQuery(document).ready(function ($) {
             if (data.success) {
                 var htmlResult = '';
                 data.data.forEach(function (item) {
-                    var htmlString = '<div class="col-sm-12 col-md-6 col-xl-4 articles__main">\n                            <div class="card">';
+                    var htmlString = '<div class="col-sm-12 col-md-6 col-xl-4 school__row">\n                            <div class="card">';
                     if ("thumbnail" in item) {
                         htmlString += '<a class="card__pict" href="' + item.permalink + '"><img class="card__img"\n                            src="' + item.thumbnail + '" alt="' + item.title + '"></a>';
                     }
