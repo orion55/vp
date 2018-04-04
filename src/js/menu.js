@@ -1,11 +1,11 @@
 jQuery(document).ready(function ($) {
 
-    var menu = $('#menu-topmenu');
-    var hasChildren = menu.find(".menu-item-has-children");
+    let menu = $('#menu-topmenu');
+    let hasChildren = menu.find(".menu-item-has-children");
 
     hasChildren.each(function () {
         $(this).find('.sub-menu').hide();
-        var aHref = $(this).children('a');
+        let aHref = $(this).children('a');
         aHref.html(aHref.html() + ' <i class="fas fa-caret-down"></i>');
     });
 
@@ -22,4 +22,7 @@ jQuery(document).ready(function ($) {
         e.preventDefault();
     });
 
+    $('.menu-item').click(function () {
+        $(this).find("a")[0].click();
+    });
 });

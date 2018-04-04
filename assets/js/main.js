@@ -88,6 +88,10 @@ jQuery(document).ready(function ($) {
     $('.menu-item-has-children > a').on('click', function (e) {
         e.preventDefault();
     });
+
+    $('.menu-item').click(function () {
+        $(this).find("a")[0].click();
+    });
 });
 'use strict';
 

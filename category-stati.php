@@ -1,11 +1,11 @@
 <?php get_header(); ?>
 
-    <div class="blog">
+    <div class="blog blog-main">
         <h1 class="blog__title">Блог</h1>
         <div class="blog__wrap">
             <div class="container">
                 <div class="row">
-                    <div class="blog__main col-sm-12 col-md-9 col-xl-9">
+                    <div class="blog__main col-sm-12 col-md-12 col-xl-9">
                         <?php if (have_posts()) :
                             while (have_posts()) :
                                 the_post(); ?>
@@ -41,10 +41,17 @@
                                         </div>
                                     </div>
                                 </div>
-                            <?php endwhile;
-                        endif; ?>
+                            <?php endwhile; ?>
+
+                            <?php if (function_exists('wp_pagenavi')) { ?>
+                            <div class="blog__pagenavi">
+                                <?php wp_pagenavi(); ?>
+                            </div>
+                        <?php } ?>
+
+                        <?php endif; ?>
                     </div>
-                    <div class="col-sm-12 col-md-3 col-xl-3">
+                    <div class="col-sm-12 col-md-12 col-xl-3">
                         <?php get_sidebar(); ?>
                     </div>
                 </div>
