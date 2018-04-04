@@ -5,15 +5,15 @@ jQuery(document).ready(function ($) {
 
     function init() {
         myMap = new ymaps.Map("map", {
-            center: [56.881222, 60.574343],
-            zoom: 16
+            center: [55.745225, 37.652211],
+            zoom: 17
         });
         myMap.container.fitToViewport();
 
-        myPlacemark = new ymaps.Placemark([56.881222, 60.574343], {
-            hintContent: 'TrueCustoms'
+        myPlacemark = new ymaps.Placemark([55.745225, 37.652211], {
+            hintContent: 'VictoriaPikalova'
         }, {
-            preset: 'islands#yellowDotIcon'
+            preset: 'islands#violetDotIcon'
         });
 
         myMap.geoObjects.add(myPlacemark);

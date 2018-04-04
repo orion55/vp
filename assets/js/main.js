@@ -69,6 +69,29 @@ jQuery(document).ready(function ($) {
 'use strict';
 
 jQuery(document).ready(function ($) {
+    ymaps.ready(init);
+    var myMap = void 0,
+        myPlacemark = void 0;
+
+    function init() {
+        myMap = new ymaps.Map("map", {
+            center: [55.745225, 37.652211],
+            zoom: 17
+        });
+        myMap.container.fitToViewport();
+
+        myPlacemark = new ymaps.Placemark([55.745225, 37.652211], {
+            hintContent: 'VictoriaPikalova'
+        }, {
+            preset: 'islands#violetDotIcon'
+        });
+
+        myMap.geoObjects.add(myPlacemark);
+    }
+});
+'use strict';
+
+jQuery(document).ready(function ($) {
 
     var menu = $('#menu-topmenu');
     var hasChildren = menu.find(".menu-item-has-children");

@@ -1484,7 +1484,7 @@ div.wpcf7 {
 .contact__title {
 	font-size: 30px;
 	font-weight: 400;
-	line-height: 20px;
+	line-height: normal;
 	padding-bottom: 50px;
 }
 
@@ -1821,6 +1821,47 @@ input.item__link:visited {
 	padding: 12px 14px;
 	border: #d187da solid 1px;
 	border-radius: 7px;
+}
+
+.business__wrap {
+	width: 1280px;
+	margin: 0 auto;
+}
+
+.business__title {
+	font-size: 36px;
+	font-weight: 400;
+	margin: 0;
+	padding-bottom: 40px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.business__map {
+	width: 100%;
+	height: 420px;
+	padding-bottom: 40px;
+}
+
+div.business__container {
+	max-width: 1280px;
+	padding-right: 0;
+	padding-bottom: 80px;
+	padding-left: 0;
+}
+
+.business__col {
+	padding-right: 0;
+}
+
+.business__text,
+.business__phone {
+	padding-bottom: 35px;
+}
+
+.business__text {
+	font-size: 18px;
+	font-weight: 400;
 }
 
 @media (min-width: 576px) {
@@ -4544,6 +4585,31 @@ div.wpcf7 {
 	padding-bottom: 0;
 }
 
+.business__wrap {
+	width: 100%;
+}
+
+div.business__container {
+	width: 100%;
+	padding: 20px;
+}
+
+.business__map {
+	padding: 10px;
+}
+
+.business__col {
+	padding-right: 15px;
+}
+
+.business__text {
+	text-align: center;
+}
+
+.info__phone {
+	justify-content: center;
+}
+
 }
 
 @media only screen and (max-width: 767px) {
@@ -4711,6 +4777,31 @@ input.wpcf7-text {
 
 .blog-main {
 	padding-bottom: 0;
+}
+
+.business__wrap {
+	width: 100%;
+}
+
+div.business__container {
+	width: 100%;
+	padding: 20px;
+}
+
+.business__map {
+	padding: 10px;
+}
+
+.business__col {
+	padding-right: 15px;
+}
+
+.business__text {
+	text-align: center;
+}
+
+.info__phone {
+	justify-content: center;
 }
 
 }
