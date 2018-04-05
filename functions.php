@@ -197,3 +197,11 @@ function custom_excerpt_length($length)
 }
 
 add_filter('excerpt_length', 'custom_excerpt_length', 999);
+
+add_action('login_head', 'my_custom_login_logo');
+function my_custom_login_logo()
+{
+    echo '<style type="text/css">
+	h1 a { background-image:url(' . get_bloginfo('template_directory') . '/assets/img/info/logo.svg) !important; }
+	</style>';
+}

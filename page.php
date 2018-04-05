@@ -36,5 +36,5 @@ get_header();
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+get_template_part('inc/contact');
 get_footer();

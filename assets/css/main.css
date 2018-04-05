@@ -322,6 +322,118 @@ a.hvr-inverse:before {
 	padding-top: 22px;
 }
 
+.content-area {
+	width: 1280px;
+	margin: 0 auto;
+	padding-bottom: 40px;
+}
+
+.entry-title {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.post-thumbnail {
+	text-align: center;
+}
+
+.comments-area input[type='text'],
+.comments-area input[type='email'],
+.comments-area input[type='url'],
+.comments-area input[type='password'],
+.comments-area input[type='search'],
+.comments-area input[type='number'],
+.comments-area input[type='tel'],
+.comments-area input[type='range'],
+.comments-area input[type='date'],
+.comments-area input[type='month'],
+.comments-area input[type='week'],
+.comments-area input[type='time'],
+.comments-area input[type='datetime'],
+.comments-area input[type='datetime-local'],
+.comments-area input[type='color'],
+.comments-area textarea {
+	padding-left: 15px;
+	border-radius: 15px;
+	background-color: #fff;
+	box-shadow: inset 0 2px 3px lightgrey;
+}
+
+.comments-area input[type='text']:focus,
+.comments-area input[type='email']:focus,
+.comments-area input[type='url']:focus,
+.comments-area input[type='password']:focus,
+.comments-area input[type='search']:focus,
+.comments-area input[type='number']:focus,
+.comments-area input[type='tel']:focus,
+.comments-area input[type='range']:focus,
+.comments-area input[type='date']:focus,
+.comments-area input[type='month']:focus,
+.comments-area input[type='week']:focus,
+.comments-area input[type='time']:focus,
+.comments-area input[type='datetime']:focus,
+.comments-area input[type='datetime-local']:focus,
+.comments-area input[type='color']:focus,
+.comments-area textarea:focus {
+	border: 1px solid #d187da;
+	box-shadow: 0 0 5px #d187da;
+}
+
+.comments-area .comment-reply-title,
+.comments-area .logged-in-as {
+	padding-bottom: 10px;
+}
+
+.comments-area p {
+	padding-bottom: 10px;
+}
+
+.comments-area p label {
+	display: inline-block;
+	width: 80px;
+}
+
+.comments-area p.comment-form-comment label {
+	display: inline-block;
+	padding-bottom: 10px;
+}
+
+.comments-area p.form-submit input {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: normal;
+	display: inline-block;
+	zoom: 1;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 14px 50px;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	transition-delay: .5s;
+	transition-duration: .5s;
+	text-align: left;
+	vertical-align: middle;
+	white-space: nowrap;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: white;
+	border: none;
+	border-radius: 15px;
+	background: linear-gradient(180deg, #bf67cb 0, #d893e0 100%);
+	align-self: left;
+}
+
+.comments-area p.form-submit input:visited {
+	color: #d9d9d9;
+}
+
+.comments-area p.form-submit input:hover {
+	background: linear-gradient(180deg, #6b64ac 0%, #9087c2 100%);
+}
+
 /*!
  * Bootstrap Grid v4.0.0 (https://getbootstrap.com)
  * Copyright 2011-2018 The Bootstrap Authors
@@ -1216,6 +1328,12 @@ ul.sub-menu .menu-item {
 	height: 100%;
 	margin: 0;
 	padding: 29px 0;
+	transition: all 1s ease-out;
+}
+
+.info__pict:hover {
+	-webkit-transform: scale(1.05);
+	transform: scale(1.05);
 }
 
 .info__img {
@@ -4486,6 +4604,11 @@ div.business__container {
 
 @media only screen and (min-device-width: 768px) and (max-width: 1199px) {
 
+.content-area {
+	width: 100%;
+	padding: 10px;
+}
+
 .header__wrap {
 	width: 100%;
 }
@@ -4613,6 +4736,19 @@ div.business__container {
 }
 
 @media only screen and (max-width: 767px) {
+
+.content-area {
+	width: 100%;
+	padding: 10px;
+}
+
+.comments-area {
+	width: 100%;
+}
+
+.comments-area p.form-submit input {
+	width: 100%;
+}
 
 .header__wrap {
 	width: 100%;

@@ -1,0 +1,93 @@
+@import "_vars.scss";
+
+.content-area {
+  width: 1280px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+.entry-title {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.post-thumbnail {
+  text-align: center;
+}
+
+.comments-area {
+  & input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="number"], input[type="tel"], input[type="range"], input[type="date"], input[type="month"], input[type="week"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="color"], textarea {
+    border-radius: 15px;
+    background-color: #ffffff;
+    padding-left: 15px;
+    box-shadow: inset 0 2px 3px lightgrey;
+    &:focus {
+      box-shadow: 0 0 5px $color-main;
+      border: 1px solid $color-main;
+    }
+  }
+  & .comment-reply-title, & .logged-in-as {
+    padding-bottom: 10px;
+  }
+  & p {
+    padding-bottom: 10px;
+    & label {
+      display: inline-block;
+      width: 80px;
+    }
+  }
+  & p.comment-form-comment label {
+    display: inline-block;
+    padding-bottom: 10px;
+  }
+  & p.form-submit input {
+    zoom: 1;
+    white-space: nowrap;
+    vertical-align: middle;
+    text-align: left;
+    cursor: pointer;
+    user-select: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: white;
+    transition-delay: .5s;
+    border: none;
+    line-height: normal;
+    margin: 0 auto;
+    background: linear-gradient(180deg, #bf67cb 0, #d893e0 100%);
+    padding: 14px 50px;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    display: inline-block;
+    align-self: left;
+    transition-duration: .5s;
+    &:visited {
+      color: darken(white, 15%);
+    }
+    &:hover {
+      background: linear-gradient(180deg, #6b64ac 0%, #9087c2 100%);
+    }
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-width: 1199px) {
+  .content-area {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .content-area {
+    width: 100%;
+    padding: 10px;
+  }
+  .comments-area {
+    width: 100%;
+  }
+  .comments-area p.form-submit input{
+    width: 100%;
+  }
+}
