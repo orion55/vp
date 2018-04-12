@@ -20,8 +20,6 @@
 
     </header><!-- .entry-header -->
 
-    <?php vp_post_thumbnail(); ?>
-
     <div class="entry-content">
         <?php
         the_content(sprintf(

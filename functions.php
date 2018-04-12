@@ -205,3 +205,5 @@ function my_custom_login_logo()
 	h1 a { background-image:url(' . get_bloginfo('template_directory') . '/assets/img/info/logo.svg) !important; }
 	</style>';
 }
+
+require get_template_directory() . '/inc/dimox_breadcrumbs.php';
