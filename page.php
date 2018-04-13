@@ -4,7 +4,7 @@
 if (is_school()) {
 
     if (function_exists('dimox_breadcrumbs')) {
-        echo '<div class="wrap">';
+        echo '<div class="wrap wrap--breadcrumbs">';
         dimox_breadcrumbs();
         echo '</div>';
     } ?>
@@ -35,33 +35,40 @@ if (is_school()) {
             $content = get_the_content();
             $szSearchPattern = '~<img [^>]* />~';
             preg_match_all($szSearchPattern, $content, $pics);
-            $content = preg_replace($szSearchPattern, '', $content, 1); ?>
+            $content = preg_replace($szSearchPattern, '', $content, 1);
 
-            <div class="academy__picture">
-                <?php echo $pics[0][0]; ?>
-            </div>
+            if (!empty($pics[0][0])): ?>
+                <div class="academy__picture">
+                    <?php echo $pics[0][0]; ?>
+                </div>
+            <?php endif; ?>
 
-            <div class="academy__section">
-                <?php $desc_service = carbon_get_the_post_meta('desc_service');
-                if (!empty($desc_service)) { ?>
-                    <div class="card-text"><?php echo wpautop($desc_service); ?></div>
-                    <?php
-                }
-                $price_service = carbon_get_the_post_meta('price_service');
-                if (!empty($price_service)) {
-                    ?>
-                    <div class="card-price">
-                        <span class="card-value"><?php echo number_format($price_service, 0, ',', ' '); ?></span>
-                        <span class="card-currency">р.</span>
-                    </div>
-                <?php } ?>
+            <div class="academy__section container">
+                <div class="row align-items-center">
+                    <?php $desc_service = carbon_get_the_post_meta('desc_service');
+                    if (!empty($desc_service)) { ?>
+                        <div class="card-text col-sm-12 col-md-7 col-xl-5 offset-xl-1"><?php echo wpautop($desc_service); ?></div>
+                        <?php
+                    }
+                    $price_service = carbon_get_the_post_meta('price_service');
+                    if (!empty($price_service)) {
+                        ?>
+                        <div class="card-price col-sm-12 col-md-5 col-xl-5 card-price--academy">
+                            <span class="card-value"><?php echo number_format($price_service, 0, ',', ' '); ?></span>
+                            <span class="card-currency">р.</span>
+                        </div>
+                    <?php } ?>
+                </div>
             </div>
 
             <div class="academy__box">
                 <?php $content = apply_filters('the_content', $content);
                 echo $content; ?>
             </div>
-
+            <div class="academy__btn">
+                <a href="<?php the_permalink(); ?>"
+                   class="card__link pure-button hvr-shutter-in-horizontal academy__link">Записаться на курс</a>
+            </div>
             <div class="school">
                 <div class="school__wrap">
                     <?php get_template_part('inc/cards'); ?>

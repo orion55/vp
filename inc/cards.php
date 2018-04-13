@@ -1,5 +1,14 @@
-<?php $categories = get_the_category();
-$cur_subcat_id = $categories[0]->cat_ID; ?>
+<?php
+if (!is_category()) {
+    $categories = get_the_category();
+    $cur_subcat_id = $categories[0]->cat_ID;
+} else {
+    global $wp;
+    $link = home_url(add_query_arg(array(), $wp->request));
+    $slug = wp_basename($link);
+    $cat = get_category_by_slug($slug);
+    $cur_subcat_id = $cat->cat_ID;
+} ?>
 <div class="school__title"
      id="school__title"><?php echo get_cat_name($cur_subcat_id); ?></div>
 <div class="school__cards container">

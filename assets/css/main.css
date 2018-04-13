@@ -4,11 +4,16 @@
 	padding: 0;
 }
 
+html,
 body {
 	font-family: 'SegoeUIRegular', 'Arial', sans-serif;
 	font-size: 16px;
 	color: #000;
 	background-color: #fff;
+}
+
+p {
+	font-size: 16px;
 }
 
 ul {
@@ -320,6 +325,30 @@ a.hvr-inverse:before {
 
 .widget-area .cat-item .children {
 	padding-top: 22px;
+}
+
+.wrap {
+	width: 1280px;
+	margin: 0 auto;
+}
+
+.wrap--breadcrumbs {
+	padding-top: 40px;
+	padding-bottom: 13px;
+}
+
+.breadcrumbs {
+	font-size: 14px;
+	padding-left: 23px;
+}
+
+.breadcrumbs a {
+	transition: .3s;
+	color: black;
+}
+
+.breadcrumbs a:hover {
+	color: #d187da;
 }
 
 .content-area {
@@ -1488,6 +1517,12 @@ input.card__link:visited {
 	color: #000;
 }
 
+.card-price--academy {
+	margin-right: 8.33%;
+	padding-bottom: 0;
+	text-align: end;
+}
+
 .services__main {
 	padding-bottom: 20px;
 }
@@ -1980,6 +2015,28 @@ div.business__container {
 .business__text {
 	font-size: 18px;
 	font-weight: 400;
+}
+
+.academy__category,
+.academy__header,
+.academy__picture {
+	width: 1280px;
+	margin: 0 auto;
+}
+
+.academy__title {
+	font-size: 1.875rem;
+	font-weight: 400;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.academy__header {
+	padding-bottom: 10px;
+}
+
+.academy__picture {
+	padding-bottom: 44px;
 }
 
 @media (min-width: 576px) {
@@ -3950,7 +4007,7 @@ div.business__container {
 @media (min-width: 1200px) {
 
 .container {
-	max-width: 1140px;
+	max-width: 1280px;
 }
 
 .col-xl {
@@ -4604,6 +4661,15 @@ div.business__container {
 
 @media only screen and (min-device-width: 768px) and (max-width: 1199px) {
 
+html,
+body {
+	font-size: 14px;
+}
+
+.wrap {
+	width: 100%;
+}
+
 .content-area {
 	width: 100%;
 	padding: 10px;
@@ -4733,9 +4799,24 @@ div.business__container {
 	justify-content: center;
 }
 
+.academy__category,
+.academy__header,
+.academy__picture {
+	width: 100%;
+}
+
 }
 
 @media only screen and (max-width: 767px) {
+
+html,
+body {
+	font-size: 14px;
+}
+
+.wrap {
+	width: 100%;
+}
 
 .content-area {
 	width: 100%;
@@ -4938,6 +5019,12 @@ div.business__container {
 
 .info__phone {
 	justify-content: center;
+}
+
+.academy__category,
+.academy__header,
+.academy__picture {
+	width: 100%;
 }
 
 }

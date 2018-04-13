@@ -1,0 +1,33 @@
+@import "../base/_vars";
+
+.academy__category, .academy__header, .academy__picture {
+  width: 1280px;
+  margin: 0 auto;
+}
+
+.academy__title {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.875rem;
+  font-weight: 400;
+}
+
+.academy__header {
+  padding-bottom: 10px;
+}
+
+.academy__picture {
+  padding-bottom: 44px;
+}
+
+@media only screen and (min-device-width: 768px) and (max-width: 1199px) {
+  .academy__category, .academy__header, .academy__picture {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .academy__category, .academy__header, .academy__picture {
+    width: 100%;
+  }
+}

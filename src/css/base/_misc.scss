@@ -209,3 +209,37 @@ a.hvr-inverse {
     }
   }
 }
+
+.wrap {
+  width: 1280px;
+  margin: 0 auto;
+}
+
+.wrap--breadcrumbs {
+  padding-top: 40px;
+  padding-bottom: 13px;
+}
+
+.breadcrumbs {
+  font-size: 14px;
+  padding-left: 23px;
+  & a {
+    color: black;
+    transition: .3s;
+    &:hover {
+      color: $color-main;
+    }
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-width: 1199px) {
+  .wrap {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .wrap {
+    width: 100%;
+  }
+}

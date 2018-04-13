@@ -4,11 +4,15 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
   font-family: 'SegoeUIRegular', 'Arial', sans-serif;
   color: #000;
   font-size: 16px;
   background-color: #fff;
+}
+
+p {
+  font-size: 16px;
 }
 
 ul {
@@ -25,4 +29,16 @@ a {
 
 :focus, a:active, a:hover {
   outline: 0;
+}
+
+@media only screen and (min-device-width: 768px) and (max-width: 1199px) {
+  html, body {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  html, body {
+    font-size: 14px;
+  }
 }
