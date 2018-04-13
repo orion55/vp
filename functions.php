@@ -207,3 +207,18 @@ function my_custom_login_logo()
 }
 
 require get_template_directory() . '/inc/dimox_breadcrumbs.php';
+
+const SCHOOL = 'Школа';
+function is_school()
+{
+    $categories = get_the_category();
+
+    $result = FALSE;
+    foreach ($categories as &$value) {
+        if (SCHOOL == $value->cat_name) {
+            $result = TRUE;
+        };
+    }
+    unset($value);
+    return $result;
+}
