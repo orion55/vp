@@ -20,14 +20,141 @@
   padding-bottom: 44px;
 }
 
+.academy__section {
+  padding-bottom: 27px;
+}
+
+.academy__box {
+  h2 {
+    text-align: center;
+    font-size: 1.875rem;
+    font-weight: 400;
+    padding-bottom: 15px;
+  }
+  h3 {
+    display: block;
+    width: 100%;
+    text-align: left;
+    font-size: 1.250rem;
+    font-weight: 600;
+    padding-top: 42px;
+    padding-left: calc(50% - 640px);
+    padding-right: calc(50% - 640px);
+  }
+  h3:nth-of-type(even) {
+    background-color: #F6F6F6;
+    & + ol {
+      background-color: #F6F6F6;
+    }
+    & + ul {
+      background-color: #F6F6F6;
+    }
+    & + p {
+      background-color: #F6F6F6;
+      & + ol {
+        background-color: #F6F6F6;
+      }
+    }
+  }
+  ol, ul {
+    display: block;
+    width: 100%;
+    padding: 64px calc(50% - 640px) 40px calc(50% - 623px);
+    margin: 0;
+    column-count: 2;
+    column-gap: 50px;
+    li {
+      padding-bottom: 30px;
+    }
+  }
+  p {
+    display: block;
+    width: 100%;
+    padding-left: calc(50% - 640px);
+    padding-right: calc(50% - 640px);
+  }
+  h3:last-of-type {
+    padding-bottom: 58px;
+  }
+}
+
+.academy__btn {
+  padding-top: 84px;
+  padding-bottom: 87px;
+  text-align: center;
+}
+
+.academy__link {
+  display: inline-block;
+}
+
 @media only screen and (min-device-width: 768px) and (max-width: 1199px) {
   .academy__category, .academy__header, .academy__picture {
     width: 100%;
+  }
+  .wrap--breadcrumbs {
+    padding: 10px;
+  }
+  .academy__header, .academy__picture {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .card-price--academy {
+    margin-right: 0;
+  }
+  .academy__box {
+    ol, ul {
+      padding: 30px 30px 20px 40px;
+    }
+    h3, p {
+      text-align: center;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    h3:last-of-type {
+      padding-bottom: 40px;
+    }
   }
 }
 
 @media only screen and (max-width: 767px) {
   .academy__category, .academy__header, .academy__picture {
     width: 100%;
+  }
+  .academy__category {
+    padding: 15px;
+  }
+  .wrap--breadcrumbs {
+    padding: 10px;
+  }
+  .academy__category .cat {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .academy__header, .academy__picture {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .card-price--academy {
+    text-align: center;
+    margin-right: 0;
+  }
+  .card-text p {
+    text-align: center;
+  }
+  .academy__box {
+    ol, ul {
+      column-count: 1;
+      column-gap: 0;
+      padding: 30px 30px 20px 40px;
+    }
+    h3, p {
+      text-align: center;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    h3:last-of-type {
+      padding-bottom: 40px;
+    }
   }
 }

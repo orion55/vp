@@ -29,6 +29,7 @@
     "hover.css": "^2.2.1",
     "imagemin-pngquant": "^5.0.1",
     "slick-carousel": "^1.8.1",
+    "smart-grid": "^2.0.1",
     "vinyl-ftp": "^0.6.1"
   },
   "dependencies": {

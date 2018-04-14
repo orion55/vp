@@ -1,0 +1,55 @@
+@import "../base/_vars";
+
+.paper {
+  width: 1280px;
+  margin: 0 auto;
+  padding-top: 47px;
+}
+
+.paper__title {
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 1.875rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+.paper__header {
+  padding-bottom: 52px;
+}
+
+.paper__picture {
+  padding-bottom: 40px;
+}
+
+.paper__box {
+  h2 {
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
+  ul {
+    li {
+      padding-bottom: 15px;
+      font-size: 16px;
+      &::before {
+        content: "\25cf";
+        color: $color-main;
+        display: inline-block;
+        width: 1.5rem;
+        margin-left: 0;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-width: 1199px) {
+
+}
+
+@media only screen and (max-width: 767px) {
+
+}

@@ -222,3 +222,18 @@ function is_school()
     unset($value);
     return $result;
 }
+
+const ARTICLE = 'Статьи';
+function is_article()
+{
+    $categories = get_the_category();
+
+    $result = FALSE;
+    foreach ($categories as &$value) {
+        if (ARTICLE == $value->cat_name) {
+            $result = TRUE;
+        };
+    }
+    unset($value);
+    return $result;
+}

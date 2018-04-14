@@ -351,6 +351,10 @@ a.hvr-inverse:before {
 	color: #d187da;
 }
 
+.breadcrumbs--paper .breadcrumbs {
+	padding-left: 0;
+}
+
 .content-area {
 	width: 1280px;
 	margin: 0 auto;
@@ -1634,6 +1638,30 @@ div.wpcf7 {
 	background: #fdfefe;
 }
 
+.popmake-content div.wpcf7 {
+	width: auto;
+	border: none;
+	background: white;
+}
+
+.popmake-content .contact__title {
+	padding-bottom: 10px;
+}
+
+.popmake-content .contact__dynamictext {
+	padding-bottom: 20px;
+}
+
+.popmake-content input.wpcf7-dynamictext {
+	font-family: 'SegoeUIRegular', 'Arial', sans-serif;
+	font-size: 16px;
+	font-weight: 700;
+	width: 100%;
+	text-align: center;
+	pointer-events: none;
+	border: none;
+}
+
 .contact__title {
 	font-size: 30px;
 	font-weight: 400;
@@ -1947,6 +1975,12 @@ input.item__link:visited {
 	color: #d187da;
 }
 
+.item__meta--paper {
+	margin-right: 8.33%;
+	margin-left: 8.33%;
+	padding-left: 19px;
+}
+
 .blog__pagenavi .wp-pagenavi {
 	font-size: 20px;
 	text-align: center;
@@ -2037,6 +2071,130 @@ div.business__container {
 
 .academy__picture {
 	padding-bottom: 44px;
+}
+
+.academy__section {
+	padding-bottom: 27px;
+}
+
+.academy__box h2 {
+	font-size: 1.875rem;
+	font-weight: 400;
+	padding-bottom: 15px;
+	text-align: center;
+}
+
+.academy__box h3 {
+	font-size: 1.250rem;
+	font-weight: 600;
+	display: block;
+	width: 100%;
+	padding-top: 42px;
+	padding-right: calc(50% - 640px);
+	padding-left: calc(50% - 640px);
+	text-align: left;
+}
+
+.academy__box h3:nth-of-type(even) {
+	background-color: #f6f6f6;
+}
+
+.academy__box h3:nth-of-type(even) + ol {
+	background-color: #f6f6f6;
+}
+
+.academy__box h3:nth-of-type(even) + ul {
+	background-color: #f6f6f6;
+}
+
+.academy__box h3:nth-of-type(even) + p {
+	background-color: #f6f6f6;
+}
+
+.academy__box h3:nth-of-type(even) + p + ol {
+	background-color: #f6f6f6;
+}
+
+.academy__box ol,
+.academy__box ul {
+	display: block;
+	width: 100%;
+	margin: 0;
+	padding: 64px calc(50% - 640px) 40px calc(50% - 623px);
+	-webkit-column-count: 2;
+	column-count: 2;
+	-webkit-column-gap: 50px;
+	column-gap: 50px;
+}
+
+.academy__box ol li,
+.academy__box ul li {
+	padding-bottom: 30px;
+}
+
+.academy__box p {
+	display: block;
+	width: 100%;
+	padding-right: calc(50% - 640px);
+	padding-left: calc(50% - 640px);
+}
+
+.academy__box h3:last-of-type {
+	padding-bottom: 58px;
+}
+
+.academy__btn {
+	padding-top: 84px;
+	padding-bottom: 87px;
+	text-align: center;
+}
+
+.academy__link {
+	display: inline-block;
+}
+
+.paper {
+	width: 1280px;
+	margin: 0 auto;
+	padding-top: 47px;
+}
+
+.paper__title {
+	font-size: 1.875rem;
+	font-weight: 400;
+	margin: 0;
+	text-align: left;
+	text-transform: uppercase;
+}
+
+.paper__header {
+	padding-bottom: 52px;
+}
+
+.paper__picture {
+	padding-bottom: 40px;
+}
+
+.paper__box h2 {
+	font-size: 1.5rem;
+	font-weight: 600;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	text-align: left;
+}
+
+.paper__box ul li {
+	font-size: 16px;
+	padding-bottom: 15px;
+}
+
+.paper__box ul li::before {
+	font-weight: bold;
+	display: inline-block;
+	width: 1.5rem;
+	margin-left: 0;
+	content: '\25cf';
+	color: #d187da;
 }
 
 @media (min-width: 576px) {
@@ -4805,6 +4963,36 @@ div.business__container {
 	width: 100%;
 }
 
+.wrap--breadcrumbs {
+	padding: 10px;
+}
+
+.academy__header,
+.academy__picture {
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+.card-price--academy {
+	margin-right: 0;
+}
+
+.academy__box ol,
+.academy__box ul {
+	padding: 30px 30px 20px 40px;
+}
+
+.academy__box h3,
+.academy__box p {
+	padding-right: 15px;
+	padding-left: 15px;
+	text-align: center;
+}
+
+.academy__box h3:last-of-type {
+	padding-bottom: 40px;
+}
+
 }
 
 @media only screen and (max-width: 767px) {
@@ -5025,6 +5213,54 @@ div.business__container {
 .academy__header,
 .academy__picture {
 	width: 100%;
+}
+
+.academy__category {
+	padding: 15px;
+}
+
+.wrap--breadcrumbs {
+	padding: 10px;
+}
+
+.academy__category .cat {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.academy__header,
+.academy__picture {
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+.card-price--academy {
+	margin-right: 0;
+	text-align: center;
+}
+
+.card-text p {
+	text-align: center;
+}
+
+.academy__box ol,
+.academy__box ul {
+	padding: 30px 30px 20px 40px;
+	-webkit-column-count: 1;
+	column-count: 1;
+	-webkit-column-gap: 0;
+	column-gap: 0;
+}
+
+.academy__box h3,
+.academy__box p {
+	padding-right: 15px;
+	padding-left: 15px;
+	text-align: center;
+}
+
+.academy__box h3:last-of-type {
+	padding-bottom: 40px;
 }
 
 }

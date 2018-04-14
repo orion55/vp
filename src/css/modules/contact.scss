@@ -22,6 +22,29 @@ div.wpcf7 {
   background: #fdfefe;
 }
 
+.popmake-content {
+  div.wpcf7 {
+    border: none;
+    background: white;
+    width: auto;
+  }
+  .contact__title {
+    padding-bottom: 10px;
+  }
+  .contact__dynamictext {
+    padding-bottom: 20px;
+  }
+  input.wpcf7-dynamictext{
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    font-family: 'SegoeUIRegular', 'Arial', sans-serif;
+    pointer-events: none;
+  }
+}
+
 .contact__title {
   font-size: 30px;
   font-weight: 400;
