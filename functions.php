@@ -237,3 +237,12 @@ function is_article()
     unset($value);
     return $result;
 }
+
+//* Remove URL field from comments
+function remove_url_comments($fields)
+{
+    unset($fields['url']);
+    return $fields;
+}
+
+add_filter('comment_form_default_fields', 'remove_url_comments');

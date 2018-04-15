@@ -2178,9 +2178,20 @@ div.business__container {
 .paper__box h2 {
 	font-size: 1.5rem;
 	font-weight: 600;
-	padding-top: 30px;
+	padding-top: 15px;
 	padding-bottom: 30px;
 	text-align: left;
+}
+
+.paper__box h3,
+.paper__box h4 {
+	padding-bottom: 10px;
+}
+
+.paper__box ul {
+	padding-top: 10px;
+	padding-bottom: 15px;
+	padding-left: 20px;
 }
 
 .paper__box ul li {
@@ -2195,6 +2206,54 @@ div.business__container {
 	margin-left: 0;
 	content: '\25cf';
 	color: #d187da;
+}
+
+.paper__box ul li a {
+	transition-delay: .3s;
+	color: black;
+}
+
+.paper__box ul li a:hover {
+	color: #d187da;
+}
+
+.paper__box ul li br {
+	display: block;
+	margin-bottom: 10px;
+	content: '';
+}
+
+.paper__box ol {
+	margin: 0;
+	padding-top: 10px;
+	padding-bottom: 15px;
+	list-style: none;
+	counter-reset: li;
+}
+
+.paper__box ol li {
+	font-size: 16px;
+	padding-bottom: 15px;
+	counter-increment: li;
+}
+
+.paper__box ol li::before {
+	font-weight: bold;
+	display: inline-block;
+	width: 1.5rem;
+	margin-left: 0;
+	content: counter(li) '.';
+	color: #d187da;
+}
+
+.paper__box ol li br {
+	display: block;
+	margin-bottom: 10px;
+	content: '';
+}
+
+.paper__box p {
+	padding-bottom: 10px;
 }
 
 @media (min-width: 576px) {
