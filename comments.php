@@ -15,61 +15,66 @@
  * the visitor has not yet entered the password we will
  * return early without loading the comments.
  */
-if ( post_password_required() ) {
-	return;
+if (post_password_required()) {
+    return;
 }
 ?>
 
-<div id="comments" class="comments-area">
+<div id="comments" class="comments__area">
+    <?php
 
-	<?php
-	// You can start editing here -- including this comment!
-	if ( have_comments() ) :
-		?>
-		<h2 class="comments-title">
-			<?php
-			$vp_comment_count = get_comments_number();
-			if ( '1' === $vp_comment_count ) {
-				printf(
-					/* translators: 1: title. */
-					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'vp' ),
-					'<span>' . get_the_title() . '</span>'
-				);
-			} else {
-				printf( // WPCS: XSS OK.
-					/* translators: 1: comment count number, 2: title. */
-					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $vp_comment_count, 'comments title', 'vp' ) ),
-					number_format_i18n( $vp_comment_count ),
-					'<span>' . get_the_title() . '</span>'
-				);
-			}
-			?>
-		</h2><!-- .comments-title -->
+    if (have_comments()) :
+        ?>
+        <div class="comments__title">
+            <span class="comments__name">Комментарии</span>
+            <?php
+            $vp_comment_count = get_comments_number();
+            if ('1' === $vp_comment_count) {
+                echo '<span class="comments__count">1 комментарий</span>';
+            } else {
+                echo '<span class="comments__count">' . $vp_comment_count . ' комментария(ев)</span>';
+            }
+            ?>
+        </div>
 
-		<?php the_comments_navigation(); ?>
+        <?php the_comments_navigation(); ?>
 
-		<ol class="comment-list">
-			<?php
-			wp_list_comments( array(
-				'style'      => 'ol',
-				'short_ping' => true,
-			) );
-			?>
-		</ol><!-- .comment-list -->
+        <ol class="comment__list">
+            <?php
+            wp_list_comments(array(
+                'style' => 'ol',
+                'per_page' => 10,
+                'reverse_top_level' => false,
+                'avatar_size'       => 95
+            ));
+            ?>
+        </ol>
 
-		<?php
-		the_comments_navigation();
+        <?php
+        the_comments_navigation();
 
-		// If comments are closed and there are comments, let's leave a little note, shall we?
-		if ( ! comments_open() ) :
-			?>
-			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'vp' ); ?></p>
-			<?php
-		endif;
+        if (!comments_open()) :
+            ?>
+            <p class="no-comments"><?php echo 'Комментарии закрыты'; ?></p>
+            <?php
+        endif;
 
-	endif; // Check for have_comments().
+    endif;
 
-	comment_form();
-	?>
+    $comments_args = array(
+        'label_submit' => 'Отправить',
+        'title_reply' => '',
+        'comment_notes_before' => '',
+        'comment_notes_after' => '',
+        'comment_field' => '<div class="comment-form-comment"><textarea id="comment" name="comment" aria-required="true" placeholder="Ваш комментарий"></textarea></div>',
+        'fields' => array(
+            'author' => '<div class="comment-form-author"><input id="author" name="author" type="text" placeholder="Ваше имя" value="' . esc_attr($commenter['comment_author']) . '" /></div>',
+            'email' => '<div class="comment-form-email"><input id="email" name="email" type="text" placeholder="Ваша почта" value="' . esc_attr($commenter['comment_author_email']) . '" /></div>'
 
-</div><!-- #comments -->
+        ),
+    );
+
+    comment_form($comments_args);
+    ?>
+
+</div>

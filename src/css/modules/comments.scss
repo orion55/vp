@@ -1,0 +1,211 @@
+@import "../base/_vars";
+@import "../base/_smart-grid";
+
+.paper_comments {
+  padding-bottom: 80px;
+}
+
+#commentform {
+  margin: 0 auto;
+}
+
+form.comment-form {
+  @include row-flex();
+  width: 940px;
+  padding: 30px 30px;
+  background-color: #EFEFEF;
+  border: solid #b4b4b4 1px;
+}
+
+.comment-form-author, .comment-form-email {
+  @include col();
+  @include size(4);
+  @include size-md(6);
+  @include size-xs(12);
+  padding-bottom: 20px;
+  input {
+    border-radius: 10px;
+    width: 260px;
+    padding-left: 15px;
+    font-size: 18px;
+    color: #000000;
+    font-weight: 300;
+    background-color: white;
+  }
+}
+
+.comment-form-comment {
+  @include col();
+  @include size(12);
+  @include size-md(12);
+  @include size-xs(12);
+  padding-bottom: 20px;
+  textarea {
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-top: 10px;
+    font-size: 18px;
+    color: #000000;
+    font-weight: 300;
+    background-color: white;
+    width: 876px;
+    height: 120px;
+  }
+}
+
+.form-submit {
+  @include col();
+  @include size(3);
+  @include size-md(6);
+  @include size-xs(12);
+  input {
+    border: $color-main solid 1px;
+    border-radius: 25px;
+    padding: 11px 50px;
+    text-align: center;
+    cursor: pointer;
+    background-color: $color-main;
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    &:hover {
+      background-color: $color-two;
+      border: $color-two solid 1px;
+    }
+  }
+}
+
+.comments__title {
+  padding-bottom: 12px;
+  border-bottom: solid $color-main 2px;
+  margin-bottom: 40px;
+  @include row-flex();
+  align-items: center;
+}
+
+.comments__name {
+  @include col();
+  @include size(6);
+  @include size-md(6);
+  @include size-xs(12);
+  font-size: 1.875rem;
+  font-weight: 400;
+}
+
+.comments__count {
+  @include col();
+  @include size(6);
+  @include size-md(6);
+  @include size-xs(12);
+  font-size: 18px;
+  font-weight: 400;
+  text-align: right;
+  padding-top: 9px;
+}
+
+.comment__list {
+  list-style: none;
+  margin: 0;
+  padding-bottom: 40px;
+  .children {
+    list-style: none;
+    margin-left: 105px;
+  }
+  .comment-body {
+    margin-bottom: 40px;
+    position: relative;
+    padding: 25px 25px 25px 150px;
+    background-color: #efefef;
+    .comment-content {
+      padding-bottom: 32px;
+    }
+    .reply a {
+      border: $color-main solid 1px;
+      border-radius: 25px;
+      padding: 11px 50px;
+      text-align: center;
+      cursor: pointer;
+      background-color: $color-main;
+      color: white;
+      font-size: 18px;
+      font-weight: 400;
+      &:hover {
+        background-color: $color-two;
+        border: $color-two solid 1px;
+      }
+    }
+    .comment-meta {
+      display: flex;
+      flex-direction: row;
+      padding-bottom: 22px;
+      .comment-metadata {
+        margin-left: 20px;
+        a {
+          color: black;
+          transition-delay: .3s;
+          &:hover {
+            color: $color-main;
+          }
+        }
+      }
+      .avatar {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        border-radius: 45px;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+      }
+    }
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-width: 1199px) {
+  form.comment-form {
+    width: 100%;
+  }
+  .comment-form-comment textarea{
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .comments__count {
+    text-align: left;
+  }
+  .comment__list {
+    padding-bottom: 20px;
+    .comment-body {
+      padding-left: 25px;
+      .comment-meta {
+        flex-direction: column;
+        text-align: center;
+        .avatar {
+          position: static;
+          margin: 0 auto 10px;
+        }
+        .comment-author {
+          display: flex;
+          flex-direction: column;
+          .says {
+            display: none;
+          }
+        }
+      }
+    }
+    .children {
+      margin-left: 40px;
+    }
+  }
+  form.comment-form {
+    width: 100%;
+  }
+  .comment-form-comment textarea{
+    width: 100%;
+  }
+  .comment-form-author input, .comment-form-email input{
+    width: 100%;
+  }
+  .paper_comments{
+    padding-bottom: 40px;
+  }
+}

@@ -246,3 +246,25 @@ function remove_url_comments($fields)
 }
 
 add_filter('comment_form_default_fields', 'remove_url_comments');
+
+add_filter('comment_form_fields', 'kama_reorder_comment_fields');
+function kama_reorder_comment_fields($fields)
+{
+    // die(print_r( $fields )); // посмотрим какие поля есть
+
+    $new_fields = array(); // сюда соберем поля в новом порядке
+
+    $myorder = array('author', 'email', 'comment'); // нужный порядок
+
+    foreach ($myorder as $key) {
+        $new_fields[$key] = $fields[$key];
+        unset($fields[$key]);
+    }
+
+    // если остались еще какие-то поля добавим их в конец
+    if ($fields)
+        foreach ($fields as $key => $val)
+            $new_fields[$key] = $val;
+
+    return $new_fields;
+}
