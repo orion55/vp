@@ -44,7 +44,12 @@ if (is_article()) {
                 <?php $content = apply_filters('the_content', $content);
                 echo $content; ?>
             </div>
-
+            <div class="paper__social">
+                <div class="paper__soc-text">Поделиться:</div>
+                <div class="paper__soc-btn">
+                    <?php echo do_shortcode("[uptolike]"); ?>
+                </div>
+            </div>
             <div class="paper_comments">
                 <?php if (comments_open() || get_comments_number()) :
                     comments_template();

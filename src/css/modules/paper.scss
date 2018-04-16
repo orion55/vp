@@ -23,7 +23,7 @@
 }
 
 .paper__box {
-  padding-bottom: 60px;
+  padding-bottom: 10px;
   h2 {
     text-align: left;
     font-size: 1.5rem;
@@ -93,6 +93,19 @@
   }
 }
 
+.paper__social {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 60px;
+}
+
+.paper__soc-text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 43px;
+  padding-right: 20px;
+}
+
 @media only screen and (min-device-width: 768px) and (max-width: 1199px) {
   .paper {
     width: 100%;
@@ -100,10 +113,13 @@
     padding-left: 20px;
     padding-right: 20px;
   }
-  .paper__header{
+  .paper__header {
     padding-bottom: 20px;
   }
-  .paper__box{
+  .paper__box {
+    padding-bottom: 20px;
+  }
+  .paper__social {
     padding-bottom: 20px;
   }
 }
@@ -115,10 +131,13 @@
     padding-left: 20px;
     padding-right: 20px;
   }
-  .paper__header{
+  .paper__header {
     padding-bottom: 20px;
   }
-  .paper__box{
+  .paper__box {
+    padding-bottom: 20px;
+  }
+  .paper__social {
     padding-bottom: 20px;
   }
 }
